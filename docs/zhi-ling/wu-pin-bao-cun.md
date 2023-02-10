@@ -1,0 +1,57 @@
+# 物品保存
+
+> 全部命令需要OP权限/后台执行, []为必填, ()为选填
+
+## save
+
+> /ei save [物品ID] (保存路径) > 将手中物品以对应ID保存至对应路径
+
+* `[物品ID]` 保存后的EI物品ID
+* `(保存路径)` 物品存储的文件路径, 默认为`物品ID.yml`
+
+  形如`test.yml`，将存储于`plugins/EasyItem/Items/test.yml`
+
+!> 如果物品ID重复(已存在对应ID的EI物品)，将保存失败并收到提示。
+
+## cover
+
+> /ei cover [物品ID] (保存路径) > 将手中物品以对应ID覆盖至对应路径
+
+* `[物品ID]` 保存后的EI物品ID
+* `(保存路径)` 物品存储的文件路径, 默认为`物品ID.yml`
+
+  形如`test.yml`，将存储于`plugins/EasyItem/Items/test.yml`
+
+
+!> 如果物品ID重复(已存在对应ID的EI物品)，将直接覆盖原物品，强行保存。
+
+## mm load
+
+> /ei mm load [物品ID] (保存路径) > 将对应ID的MM物品保存为NI物品
+
+* `[物品ID]` 待转换的MM物品ID
+* `(保存路径)` 物品存储的文件路径，默认为配置文件中的Main.MMItemsPath
+
+  形如`test.yml`，将存储于`plugins/EasyItem/Items/test.yml`
+
+!> 如果物品ID重复(已存在对应ID的EI物品)，将保存失败并收到提示。
+
+## mm cover
+
+> /ei mm cover [物品ID] (保存路径) > 将对应ID的MM物品覆盖为NI物品
+
+* `[物品ID]` 待转换的MM物品ID
+* `(保存路径)` 物品存储的文件路径，默认为配置文件中的Main.MMItemsPath
+
+  形如`test.yml`，将存储于`plugins/EasyItem/Items/test.yml`
+
+!> 如果物品ID重复(已存在对应ID的EI物品)，将直接覆盖原物品，强行保存。
+
+## mm loadAll
+
+> /ei mm loadAll (保存路径) > 将全部MM物品转化为NI物品
+
+* `(保存路径)` 物品存储的文件路径，默认为配置文件中的Main.MMItemsPath
+  形如`test.yml`，将存储于`plugins/EasyItem/Items/test.yml`
+
+!> 如果物品ID重复(已存在对应ID的EI物品)，将保存失败并收到提示。
